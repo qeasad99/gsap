@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: linear-gradient(-35deg, lightpink, navy);
+        }
+
+        .btn {
+            background-color: antiquewhite;
+            font-size: 20px;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn">구매하기</button>
+    <script>
+        let btn = document.querySelector(".btn")
+        btn.addEventListener("mouseenter", function () {
+            gsap.to(btn, {
+                scale: 1.2,
+                rotation: 5,
+                duration: 1,
+                ease: "elastic.out(3)",
+                // overwrite: true,
+
+            });
+
+        });
+
+        btn.addEventListener("mouseleave", function () {
+            gsap.to(btn, {
+                scale: 1,
+                rotation: 0,
+                duration: 0.3,
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>

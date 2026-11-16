@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        section {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .box1 {
+            background-color: lightblue;
+        }
+
+        .box2 {
+            background-color: lightpink;
+        }
+
+        .box3 {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <section class="box1">scetion1</section>
+        <section class="box2">scetion2</section>
+        <section class="box3">scetion3</section>
+    </div>
+    <script>
+        gsap.to(".box2", {
+
+            scrollTrigger: {
+
+                trigger: ".box2",
+                end: "+=2000",//시작위치부터 스크롤이 1000px 이동했을때까지
+                pin: true, //고정
+                markers: true,
+            }
+
+        })
+    </script>
+</body>
+
+</html>

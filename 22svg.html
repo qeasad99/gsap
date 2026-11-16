@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cls-1 {
+            fill: none;
+            stroke: #c70f3d;
+            stroke-width: 3px;
+            stroke-miterlimit: 10;
+            stroke-dasharray: 600;
+            /*선길이*/
+            stroke-dashoffset: 600;
+            animation: ani 4s infinite linear;
+        }
+
+        @keyframes ani {
+            0% {
+                stroke-dashoffset: 600;
+            }
+
+            100% {
+                stroke-dashoffset: 0;
+            }
+
+        }
+
+        div {
+            width: 200px;
+            margin: 50px auto;
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+    <div> <svg viewBox="0 0 185 185">
+            <circle class="cls-1" cx="92.5" cy="92.5" r="92" />
+        </svg>
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>
+<!--
+<svg로 저장하기>
+일러스트에서 만든 이미지를 html에 코드로 가지고 가서
+크기를 조절할 수 있음
+
+1. 일러스트에서 원하는 모양을 그림
+(면색 : 없음 / 선색 : 넣음)
+2. file - export - export as
+3. 파일형식 : svg - export
+4. show code클릭
+5. 메모장에 코드가 나옴
+6.필요한 코드로 정리함
+7.부모를 하나 만들어서 그안에 svg를 넣음
+
+선이 그려지는 모습으로 연출하고 싶다면
+-stroke-dasharray ::선을 점선으로 만드는 속성
+값을 입력하면 입력한 값만큼 선이 보임
+예를 들어 선의 길이가 1000인데 stroke-dasharray를 500으로 입력하면 선이 반만 보임
+-stroke-dashoffset ::선의 시작점을 조절하는 속성
+stroke-dashoffset:0 =>선이 다 보임
+stroke-dashoffset: 선의 길이값 =>선이 안 보임
+stroke-dashoffset: stroke-dasharray =>선이 안보임
+
+
+
+
+
+
+-->

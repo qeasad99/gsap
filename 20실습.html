@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
+    <style>
+        body {
+            height: 3000px;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            margin: 200px;
+
+        }
+
+        .box1 {
+            background-color: lightblue;
+        }
+
+        .box2 {
+            background-color: lightpink;
+        }
+
+        .box3 {
+            background-color: lightsalmon;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+    <script>
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: ".box2",
+                start: "top 50%",
+                scrub: 2,//스크롤의 영향을 다시 받도록
+                markers: true
+            }
+
+        })
+            .to(".box1", { rotation: 360, duration: 1 })
+            .to(".box2", { scale: 2, duration: 1 })
+            .to(".box3", { x: 300, duration: 1 })
+
+    </script>
+
+</body>
+
+</html>

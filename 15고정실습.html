@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        #section01 {
+            background-color: tomato;
+        }
+
+        #section02 {
+            background-color: teal;
+        }
+
+        #section03 {
+            background-color: thistle;
+        }
+
+        #section02 {
+            align-items: flex-start;
+            gap: 30px;
+            padding-top: 100px;
+        }
+
+        #section02 img {
+            width: 300px;
+        }
+
+        #section02 ul {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            border: 1px solid red;
+
+        }
+
+        #section02 ul li {
+            width: 300px;
+            height: 300px;
+            background-color: #555;
+            color: #fff;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="section01">section01</section>
+    <section id="section02">
+        <img src="img/flower.png" alt="">
+        <ul>
+            <li>박스1</li>
+            <li>박스2</li>
+            <li>박스3</li>
+            <li>박스4</li>
+            <li>박스5</li>
+            <li>박스6</li>
+        </ul>
+    </section>
+    <section id="section03">section03</section>
+    <script>
+
+        gsap.to("#section02 ul", {
+            y: -1500,//마지막박스 6번이 section02에 보여야함
+
+            scrollTrigger: {
+                trigger: "#section02",
+                start: "top top",
+                 
+                pin: true,
+                markers: true,
+                scrub: 1,
+
+
+            }
+        })
+    </script>
+</body>
+
+</html>

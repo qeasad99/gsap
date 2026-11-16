@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            opacity: 0;
+
+        }
+
+        /*출발지점*/
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <script>
+        gsap.to(".box", { //도착지점
+            x: 400,
+            y: 500,
+            opacity: 1,
+            backgroundColor: "#ccc",
+            duration: 3,
+            ease: "bounce.out"
+
+
+        })
+    </script>
+
+</body>
+
+</html>

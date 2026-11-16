@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        .box {
+            width: 80px;
+            height: 20px;
+            background-color: tomato;
+            text-align: center;
+            margin: 20px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box linear">linear</div>
+    <div class="box power">power</div>
+    <div class="box back">back</div>
+    <div class="box elastic">elastic</div>
+    <div class="box bounce">bounce</div>
+    <script>
+        gsap.to(".linear", {
+            x: 400,
+            duration: 2,
+            ease: "linear",
+
+        })
+        gsap.to(".power", {
+            x: 400,
+            duration: 2,
+            ease: "power.out",
+            delay: 2,
+
+        })
+        gsap.to(".back", {
+            x: 400,
+            duration: 2,
+            ease: "back.out(4)",
+            delay: 4,
+
+        })
+        gsap.to(".elastic", {
+            x: 400,
+            duration: 2,
+            ease: "elastic.out(3)",
+            delay: 6,
+
+        })
+        gsap.to(".bounce", {
+            x: 400,
+            duration: 2,
+            ease: "bounce.inout",
+            delay: 8,
+
+        })
+    </script>
+</body>
+
+</html>
+<!--
+ease 느낌
+linear : 시작과 끝이 일정한 속도
+
+power1.out :시작은 빠르고 서서히 멈춤
+(power1~power4)
+
+back.out:끝에서 살짝 앞으로 갔다가 복귀
+back.out(2,3,4) :숫자가 클수록 더 앞으로 갔다가 제자리로 복귀됨
+
+elastic.out :고무줄 튕기듯 여러번 흔들림
+
+bounce.out :공이 바닥에 튕기듯 멈춤
+
+.in :천천히 시작하고 빠르게 끝남
+.out :빠르게 시작하고 천천히 끝남
+.inout: 천천히 시작하고 천천히 끝남
+-->

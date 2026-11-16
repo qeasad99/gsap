@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul {
+            display: flex;
+            gap: 1rem;
+            margin: 100px auto;
+            width: 600px;
+        }
+
+        li {
+            width: calc(100% / 4);
+            height: 200px;
+            background-color: tomato;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>list1</li>
+        <li>list1</li>
+        <li>list1</li>
+        <li>list1</li>
+    </ul>
+    <script>
+        gsap.from("li", {
+            y: 50,
+            opacity: 0,
+            duration: 2,
+            stagger: 0.3 //0.3초 간격으로 하나씩 실행
+
+
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+    <style>
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+        }
+
+        li {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            border-radius: 0.7rem;
+            transform: translateY(50px);
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <script>
+
+        gsap.to("li", {
+            y: 0,
+            opacity: 1,
+            duration: 2,
+            ease: "back.out(4)",
+            stagger: 0.3,
+
+        })
+    </script>
+</body>
+
+</html>
